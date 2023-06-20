@@ -1,6 +1,7 @@
+/* SPCFORK - 2023-06-20 - too lazy to be ""fancy"" */
+
 var editor = document.getElementById('editor');
 var preview = document.getElementById('preview');
-
 
 var htmlCode;
 
