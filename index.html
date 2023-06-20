@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChubML IDE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ChubML IDE</h1>
+  </header>
+
+  <div class="toolbar">
+    <a id="daSave">
+      <button id="runButton" onclick="downloadFile()">Save</button>
+    </a>
+    <a id="daSave">
+      <button id="runButton" onclick="downAsChub()">Export Chub To HTML</button>
+    </a>
+    <button id="formatButton">Format</button>
+    
+    <div class="rtoolbar">
+      <button id="theme" onclick="settheme('orange')">Orange Theme</button>
+      <button id="theme" onclick="settheme('purple')">Purple Theme</button>
+    </div>
+  </div>
+  
+  <div class="container">
+    
+    <section id="editorContainer">
+      
+      <h2>ChubML Code</h2>
+      <textarea id="editor"></textarea>
+   
+    </section>
+  
+    <section id="previewContainer">
+    
+      <h2>Preview</h2>
+      <div id="preview"></div>
+    
+    </section>
+    
+  </div>
+
+  <section>
+  <h1>ChubML</h1>
+  <p>ChubML (Chub Markup Language) is a lightweight markup language designed to simplify the process of creating websites. It provides a simplified syntax that allows for rapid and efficient development.</p>
+  
+  <h2>Features</h2>
+  <ul>
+    <li>
+      <strong>Intuitive Indentation:</strong> The indentation in ChubML is used to define the hierarchical structure of elements, making it easy to understand the relationships between parent and child elements.
+    </li>
+    <li>
+      <strong>Easy Attribute Declaration:</strong> Attributes in ChubML are denoted by the '%' symbol. Simply prefix an attribute name with '%' to assign it to an element. For example, <code>%class=example-class</code> sets the <code>class</code> attribute to <code>example-class</code>.
+    </li>
+    <li>
+      <strong>Data Attributes:</strong> ChubML supports data attributes using the '$' symbol. Data attributes are automatically prefixed with 'data-', making it convenient to assign custom data to elements. For example, <code>$custom-attr=value</code> sets the <code>data-custom-attr</code> attribute to <code>value</code>.
+    </li>
+    <li>
+      <strong>Comments:</strong> Comments in ChubML are denoted by the '//' symbol. You can add comments to your code to provide explanations or make notes without affecting the rendering of the webpage.
+    </li>
+    <li>
+      <strong>Scripts:</strong> ChubML supports script inclusion using the '{=' and '=}' delimiters. You can import external scripts by specifying the script's source within the delimiters. For example, <code>{= src="script.js" =}</code> imports the script from the 'script.js' file.
+    </li>
+    <li>
+      <strong>Class and ID:</strong> To define classes and IDs in ChubML, use the '.' and '#' symbols, respectively. For example, <code>div .example-class #unique-id</code> creates a <code>div</code> element with the class <code>example-class</code> and the ID <code>unique-id</code>.
+    </li>
+  </ul>
+  
+  <h2>Getting Started</h2>
+  <ol>
+    <li>
+      Create an HTML file and include the ChubML script.
+      <pre><code>&lt;script src="chubml.js"&gt;&lt;/script&gt;</code></pre>
+    </li>
+    <li>
+      Write your web page content using ChubML syntax, defining the structure and attributes of the elements.
+      <pre><code>
+  html;
+    head;
+      // Add meta tags, title, and external resources here.
+    //
+
+    body;
+      // Add your page content here using ChubML syntax.
+      // Indentation and symbols like '.', '#', '%', and '$' will help define the elements.
+    //
+</code></pre>
+    </li>
+    <li>
+      Create a script to execute one of the selection of Chub Functions which can be used to parse a page.
+
+      Here's an example:
+      <pre><code>
+  // var chubLocation = "html"
+  var chubDev = true;
+
+
+  ChubRep()
+  // Add your ChubML code here
+
+      </code></pre>
+    </li>
+  </ol>
+  
+  <h3>Functions</h3>
+  <p>There are 3 functions available in ChubML:</p>
+  <ul>
+    <li><strong>CHUBparse:</strong> Turns text into ChubML.</li>
+    <li><strong>injectChub:</strong> Injects formatted ChubML into the DOM at the specified location (or default location if not specified).</li>
+    <li><strong>ChubRep:</strong> Replaces the whole document with ChubML.</li>
+  </ul>
+  
+  <h3>Examples</h3>
+  <p>Here are a few examples to showcase the ChubML syntax:</p>
+  <pre><code>Creating a div element with a class and an ID:
+div .example-class #unique-id
+
+Adding a link with a URL and text content:
+a .link-url %href="https://example.com"
+  "Visit Example.com"
+
+Defining a script import:
+{= src="script.js" =}
+</code></pre>
+  
+  <h2>Contribution</h2>
+  <p>Contributions to ChubML are welcome! If you have any suggestions, improvements, or bug reports, please submit them through the issue tracker or create a pull request on the official GitHub repository.</p>
+  <p>For more examples and detailed syntax specifications, refer to the official ChubML documentation.</p>
+</section>
+
+
+  <script src="https://chubml-cml.spcfork.repl.co/cml.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
